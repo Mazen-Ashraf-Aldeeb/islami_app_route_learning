@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/core/Colors/app_colors.dart';
 import 'package:islami_app/core/StringsStyle/TextStyle.dart';
-import 'package:islami_app/core/constant/onboarding_datal.dart';
+import 'package:islami_app/core/constant/onboarding_data.dart';
 import 'package:islami_app/modules/layout/screens/layout_screen.dart';
 
 class OnboardingScreen extends StatefulWidget {
