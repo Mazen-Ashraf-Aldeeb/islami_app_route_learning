@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:islami_app/core/Colors/app_colors.dart';
 import 'package:islami_app/modules/layout/screens/layout_screen.dart';
+import 'package:islami_app/modules/onboarding/onboarding_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -16,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     Future.delayed(Duration(seconds: 3),() {
       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
-        return LayoutScreen();
+        return OnboardingScreen();
       },));
 
     },);
