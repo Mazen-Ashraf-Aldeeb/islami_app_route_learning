@@ -59,49 +59,49 @@ class _SebhaScreenState extends State<SebhaScreen> {
                           offset: Offset(30, 8),
                           child: Image.asset("assets/logo/Mask group.png"),
                         ),
-                        Stack(
-                          alignment: Alignment.center,
-                          children: [
-                            InkWell(
-                              onTap: () {
-                                setState(() {
-                                angle-=2;
-                                  if (counter < 34) {
-                                    counter++;
-                                    if (counter == 34 &&
-                                        index < azkar.length - 1) {
-                                      index++;
-                                      counter = 1;
-                                    }else if (index == azkar.length - 1 && counter == 34) {
-                                        index = 0;
-                                        counter = 1;
-                                      }
-                                   }
-                                });
-                              },
-                              child: Transform.rotate(angle: angle,
+                        InkWell(
+                          onTap: () {
+                            setState(() {
+                              angle-=2;
+                              if (counter < 34) {
+                                counter++;
+                                if (counter == 34 &&
+                                    index < azkar.length - 1) {
+                                  index++;
+                                  counter = 1;
+                                }else if (index == azkar.length - 1 && counter == 34) {
+                                  index = 0;
+                                  counter = 1;
+                                }
+                              }
+                            });
+                          },
+                          child: Stack(
+                            alignment: Alignment.center,
+                            children: [
+                              Transform.rotate(angle: angle,
                               child: Image.asset("assets/logo/SebhaBody 1.png")),
-                            ),
-                            Column(
-                              children: [
-                                Text(
-                                  azkar[index],
-                                  style: AppTextStyle.title?.copyWith(
-                                    color: AppColors.white,
-                                    fontSize: 36,
+                              Column(
+                                children: [
+                                  Text(
+                                    azkar[index],
+                                    style: AppTextStyle.title?.copyWith(
+                                      color: AppColors.white,
+                                      fontSize: 36,
+                                    ),
                                   ),
-                                ),
-                                SizedBox(height: 10),
-                                Text(
-                                  "$counter",
-                                  style: AppTextStyle.title?.copyWith(
-                                    color: AppColors.white,
-                                    fontSize: 36,
+                                  SizedBox(height: 10),
+                                  Text(
+                                    "$counter",
+                                    style: AppTextStyle.title?.copyWith(
+                                      color: AppColors.white,
+                                      fontSize: 36,
+                                    ),
                                   ),
-                                ),
-                              ],
-                            ),
-                          ],
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),
