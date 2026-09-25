@@ -14,7 +14,7 @@ class _SebhaScreenState extends State<SebhaScreen> {
   int index = 0;
   int counter = 1;
   List<String> azkar = ["سبحان الله", "الحمد لله", "الله أكبر"];
-  double angle=0;
+  double angle = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,14 +62,14 @@ class _SebhaScreenState extends State<SebhaScreen> {
                         InkWell(
                           onTap: () {
                             setState(() {
-                              angle-=2;
+                              angle -= 2;
                               if (counter < 34) {
                                 counter++;
-                                if (counter == 34 &&
-                                    index < azkar.length - 1) {
+                                if (counter == 34 && index < azkar.length - 1) {
                                   index++;
                                   counter = 1;
-                                }else if (index == azkar.length - 1 && counter == 34) {
+                                } else if (index == azkar.length - 1 &&
+                                    counter == 34) {
                                   index = 0;
                                   counter = 1;
                                 }
@@ -79,8 +79,12 @@ class _SebhaScreenState extends State<SebhaScreen> {
                           child: Stack(
                             alignment: Alignment.center,
                             children: [
-                              Transform.rotate(angle: angle,
-                              child: Image.asset("assets/logo/SebhaBody 1.png")),
+                              Transform.rotate(
+                                angle: angle,
+                                child: Image.asset(
+                                  "assets/logo/SebhaBody 1.png",
+                                ),
+                              ),
                               Column(
                                 children: [
                                   Text(
@@ -90,6 +94,7 @@ class _SebhaScreenState extends State<SebhaScreen> {
                                       fontSize: 36,
                                     ),
                                   ),
+
                                   SizedBox(height: 10),
                                   Text(
                                     "$counter",
